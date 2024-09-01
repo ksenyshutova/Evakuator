@@ -1,0 +1,33 @@
+.field {
+    &__label {
+        @include fluid-text(22, 15);
+        color: $color-grey;
+        margin-bottom: 1vw;
+    }
+
+    &__select {
+        @include fluid-text(26, 12);
+        background-color: $color-white;
+        border: 0.5px solid $color-blue;
+        padding: 11px 24px 12px 24px;
+    }
+
+    &__input {
+        @include fluid-text(26, 12);
+        color: rgb(179, 200, 209);
+        border: 0.5px solid $color-blue;
+        padding: 11px 24px 12px 24px;
+
+        &-textarea {
+            resize: none;
+
+            &_big {
+                height: 346px;
+            }
+        }
+
+        &_mini {
+            width: 70%;
+        }
+    }
+}

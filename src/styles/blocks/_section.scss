@@ -1,0 +1,61 @@
+.section {
+    padding-top: $section-padding-y;
+
+    @include tablet {
+        padding-top: 20px;
+    }
+
+    @include mobile {
+        padding-top: 10px;
+    }
+
+    &__information {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+        padding: 0 100px;
+        background-image: url(../images/pictures/bg.svg);
+        background-size: 150%;
+        background-position: center center;
+
+        @include tablet {
+            padding: 20px 30px;
+            justify-content: center;
+        }
+
+        &-desc {
+            @include fluid-text(40, 20);
+        }
+    }
+
+    &__hero {
+        background-color: $color-white;
+    }
+
+    &__evakuator {
+        background-color: $background-yellow;
+        padding-bottom: 50px;
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__advantages {
+        background-color: $color-white;
+    }
+
+    &__order {
+        margin-top: 7%;
+
+        @include mobile {
+            margin-top: 0;
+        }
+    }
+}

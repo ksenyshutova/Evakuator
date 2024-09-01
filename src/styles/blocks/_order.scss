@@ -1,0 +1,74 @@
+.order {
+    display: flex;
+    background-color: $background-yellow;
+
+    &__information {
+        flex: 1;
+        padding: 80px 20px;
+
+        @include tablet {
+            padding: 20px;
+        }
+    }
+
+    &__title {
+        @include fluid-text(40, 20);
+        font-weight: 700;
+        margin-bottom: 32px;
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__menu {
+        &-list {
+            position: relative;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        &-item {
+            @include fluid-text(26, 15);
+            margin-bottom: 1vw;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 50%;
+                height: 50%;
+                background-image: url('../images/icons/done.svg');
+                background-repeat: no-repeat;
+                position: absolute;
+            }
+        }
+
+        &-info {
+            margin-left: 7vw;
+
+            @media (min-width: 700px) {
+                margin-left: 5vw;
+            }
+        }
+    }
+
+    &__image {
+        background-image: url('../images/pictures/women.svg');
+        background-size: cover;
+        width: calc(50% + 20px);
+
+        &_tool {
+            background-image: url('../images/pictures/tool.svg');
+            background-size: cover;
+            width: calc(50% - 20px);
+        }
+    }
+
+    &__desc {
+        @include fluid-text(26, 15);
+    }
+}

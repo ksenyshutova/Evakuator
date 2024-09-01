@@ -1,0 +1,123 @@
+.result {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    &__title {
+        @include fluid-text(40, 20);
+        font-weight: 700;
+        margin-bottom: 32px;
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__information {
+        background-color: $color-white;
+        padding: 60px;
+        border-radius: 0 20px 20px;
+
+        @include tablet {
+            padding: 20px;
+        }
+
+        @include mobile {
+            padding: 10px;
+        }
+    }
+
+    &__menu {
+        &-list {
+            position: relative;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+
+        &-item {
+            @include fluid-text(26, 15);
+            margin-bottom: 1vw;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 50%;
+                height: 50%;
+                background-image: url('../images/icons/done.svg');
+                background-repeat: no-repeat;
+                position: absolute;
+            }
+        }
+
+        &-lists {
+            margin-bottom: 0;
+            padding-left: 0;
+            counter-reset: count 0;
+        }
+
+        &-items {
+            margin-bottom: 0.5vw;
+        }
+
+        &-information {
+            @include fluid-text(26, 15);
+
+            &::before {
+                content: counter(count);
+                counter-increment: count 1;
+                text-align: center;
+                border-radius: 50%;
+                padding: 0.3vw 0.7vw;
+                list-style: none;
+                border: 2px solid $color-blue;
+                color: $color-blue;
+                font-weight: 700;
+                margin-right: 1vw;
+            }
+        }
+
+        &-info {
+            margin-left: 7vw;
+
+            @media (min-width: 700px) {
+                margin-left: 5vw;
+            }
+        }
+    }
+
+    &__button {
+        border: none;
+        background-color: transparent;
+        @include fluid-text(32, 18);
+        height: 78px;
+
+        &.active {
+            background-color: $color-white;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+
+    &__desc {
+        @include fluid-text(26, 15);
+    }
+
+    &__subtitle {
+        @include fluid-text(26, 18);
+        margin: 28px 0;
+        font-weight: 700;
+
+        @include tablet {
+            margin: 20px 0;
+        }
+
+        @include mobile {
+            margin: 10px 0;
+        }
+    }
+}

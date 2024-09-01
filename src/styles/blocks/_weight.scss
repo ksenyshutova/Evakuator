@@ -1,0 +1,33 @@
+.weight {
+    &__title {
+        @include fluid-text(40, 20);
+        font-weight: 700;
+        margin-bottom: 48px;
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__information {
+        @include fluid-text(26, 18);
+
+        &-title {
+            @include fluid-text(26, 18);
+            font-weight: 700;
+            margin-bottom: 48px;
+
+            @include tablet {
+                margin-bottom: 20px;
+            }
+
+            @include mobile {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

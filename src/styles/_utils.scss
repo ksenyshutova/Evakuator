@@ -1,0 +1,50 @@
+@import "./variables";
+
+.container {
+  max-width: calc($container-width + $container-padding-x * 2);
+  margin: 0 auto;
+  padding: 0 $container-padding-x;
+
+  &-full {
+    background-color: $color-white;
+    padding: 0 100px;
+
+    @include tablet {
+      padding: 0 50px;
+    }
+
+    @include mobile {
+      padding: 0 20px;
+    }
+
+    &_grey {
+      background-color: $background-grey;
+      padding: 0 100px;
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}

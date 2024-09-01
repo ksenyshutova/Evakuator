@@ -1,0 +1,84 @@
+.carousel {
+    &-indicators [data-bs-target] {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $color-blue;
+
+        @include tablet {
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+    &-item {
+        &-title {
+            @include fluid-text(20, 12);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        &-cars {
+            display: flex;
+            gap: 2vw;
+        }
+
+        &-car {
+            background-color: $color-white;
+            flex: 1;
+            padding: 10px;
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        &-desc {
+            @include fluid-text(20, 12);
+            margin-top: 20px;
+        }
+    }
+
+    &-control {
+        &-prev,
+        &-next {
+            color: $color-blue;
+            border: 1px solid $color-blue;
+        }
+
+        &-prev-icon,
+        &-next-icon {
+            background-color: transparent;
+        }
+    }
+
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: -10%;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.carousel-control-prev {
+    left: -10%;
+    border: none;
+}
+
+.carousel-control-next {
+    right: -10%;
+    border: none;
+}
+
+.carousel-control-prev-icon {
+    border: 1px solid $color-blue;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgb(2, 151, 212)'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+    border: 1px solid $color-blue;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgb(2, 151, 212)'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}

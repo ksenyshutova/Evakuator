@@ -1,0 +1,44 @@
+.evakuator {
+    display: flex;
+    gap: 5vw;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    &__title {
+        @include fluid-text(40, 20);
+        font-weight: 700;
+        margin-bottom: 48px;
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__desc {
+        @include fluid-text(26, 15);
+    }
+
+    &__image {
+        margin-bottom: 32px;
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+}

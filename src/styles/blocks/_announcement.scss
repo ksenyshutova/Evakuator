@@ -1,0 +1,39 @@
+.announcement {
+    &__body {
+        margin-top: 60px;
+
+        @include tablet {
+            margin-top: 20px;
+        }
+
+        @include mobile {
+            margin-top: 10px;
+        }
+    }
+
+    &__information {
+        @include fluid-text(50, 20);
+        font-weight: 700;
+        color: $color-white;
+        content: "";
+        display: block;
+        text-align: center;
+        padding: 2vw 0;
+        width: 100%;
+        background-image: url(../images/pictures/bg.svg);
+        background-size: 150%;
+        background-position: center center;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__description {
+        display: flex;
+    }
+
+    &__desc {
+        @include fluid-text(26, 12);
+    }
+}
