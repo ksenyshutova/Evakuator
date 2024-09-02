@@ -96,6 +96,11 @@
         background-color: transparent;
         @include fluid-text(32, 18);
         height: 78px;
+        padding: 20px;
+
+        @include tablet {
+            padding: 5px;
+        }
 
         &.active {
             background-color: $color-white;
