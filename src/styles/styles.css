@@ -571,6 +571,7 @@ svg * {
 @media (max-width: 609px) {
   .service-card__info {
     width: 100%;
+    padding: 0;
   }
 }
 .service-card__id {
@@ -578,6 +579,11 @@ svg * {
   font-size: 12px;
   font-weight: 500;
   line-height: 0;
+}
+@media (max-width: 609px) {
+  .service-card__id {
+    display: none;
+  }
 }
 .service-card__advertising {
   color: rgb(2, 151, 212);
@@ -1331,6 +1337,11 @@ svg * {
 }
 .announcement__desc {
   font-size: clamp(12px, 1.3541666667vw, 26px);
+}
+@media (max-width: 609px) {
+  .announcement__image {
+    display: none;
+  }
 }
 
 .contact-us {

@@ -161,6 +161,7 @@
 
             @include mobile {
                 width: 100%;
+                padding: 0;
             }
         }
 
@@ -169,6 +170,10 @@
             font-size: 12px;
             font-weight: 500;
             line-height: 0;
+
+            @include mobile {
+                display: none;
+            }
         }
 
         &__advertising {

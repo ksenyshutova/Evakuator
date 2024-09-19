@@ -36,4 +36,10 @@
     &__desc {
         @include fluid-text(26, 12);
     }
+
+    &__image {
+        @include mobile {
+            display: none;
+        }
+    }
 }
