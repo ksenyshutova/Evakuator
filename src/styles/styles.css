@@ -276,28 +276,6 @@ svg * {
     flex-direction: column;
   }
 }
-.header__information {
-  font-size: clamp(20px, 2.6041666667vw, 50px);
-  font-weight: 700;
-  color: rgb(255, 255, 255);
-  content: "";
-  display: block;
-  text-align: center;
-  padding: 2vw 0;
-  width: 100%;
-  background-image: url(../images/pictures/bg.svg);
-  background-size: 150%;
-  background-position: center center;
-}
-@media (max-width: 609px) {
-  .header__information {
-    display: none;
-  }
-}
-.header__information-link {
-  color: rgb(2, 151, 212);
-  text-decoration: underline;
-}
 .header__menu-list {
   display: flex;
   flex-direction: row;
@@ -338,6 +316,29 @@ svg * {
   }
 }
 
+.telephone__information {
+  font-size: clamp(20px, 2.6041666667vw, 50px);
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  content: "";
+  display: block;
+  text-align: center;
+  padding: 2vw 0;
+  width: 100%;
+  background-image: url(../images/pictures/bg.svg);
+  background-size: 150%;
+  background-position: center center;
+}
+@media (max-width: 609px) {
+  .telephone__information {
+    display: none;
+  }
+}
+.telephone__information-link {
+  color: rgb(2, 151, 212);
+  text-decoration: underline;
+}
+
 .section {
   padding-top: 100px;
 }
@@ -370,6 +371,7 @@ svg * {
 }
 .section__information-desc {
   font-size: clamp(20px, 2.0833333333vw, 40px);
+  font-weight: 700;
 }
 .section__hero {
   background-color: rgb(255, 255, 255);
@@ -554,6 +556,7 @@ svg * {
   font-size: clamp(12px, 1.0416666667vw, 20px);
 }
 .service-card__info {
+  text-align: center;
   background-color: transparent;
   border: 1px solid rgb(2, 151, 212);
   border-radius: 50px;
@@ -647,6 +650,17 @@ svg * {
 .hero__title {
   font-size: clamp(20px, 2.0833333333vw, 40px);
   font-weight: 700;
+  margin-bottom: 48px;
+}
+@media (max-width: 1099px) {
+  .hero__title {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 609px) {
+  .hero__title {
+    margin-bottom: 10px;
+  }
 }
 .hero__description {
   flex: 1;
@@ -732,7 +746,12 @@ svg * {
 @media (max-width: 1099px) {
   .price__title {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 609px) {
+  .price__title {
+    margin-bottom: 10px;
   }
 }
 .price__decription {
@@ -1384,8 +1403,8 @@ svg * {
   margin-bottom: 5px;
 }
 .contact-us__agreement {
-  align-items: baseline;
   display: flex;
+  align-items: baseline;
 }
 .contact-us__agreement-desc {
   font-size: clamp(12px, 1.1458333333vw, 22px);
@@ -1407,5 +1426,5 @@ svg * {
 .contact-us__description {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
 }/*# sourceMappingURL=styles.css.map */

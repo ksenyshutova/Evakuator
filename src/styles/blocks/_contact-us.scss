@@ -69,8 +69,8 @@
     }
 
     &__agreement {
-        align-items: baseline;
         display: flex;
+        align-items: baseline;
 
         &-desc {
             @include fluid-text(22, 12);
@@ -97,6 +97,6 @@
     &__description {
         display: flex;
         justify-content: space-between;
-        align-items: end;
+        align-items: flex-end;
     }
 }

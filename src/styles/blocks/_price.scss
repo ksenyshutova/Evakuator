@@ -25,7 +25,11 @@
 
         @include tablet {
             margin-top: 0;
-            margin-bottom: 0;
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            margin-bottom: 10px;
         }
     }
 
